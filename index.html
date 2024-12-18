@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Collection Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎬 Movie Collection Manager</h1>
+        </header>
+
+        <div class="form-container">
+            <h2>Add a New Movie</h2>
+            <div class="form-group">
+                <label for="title">Title:</label>
+                <input type="text" id="title" placeholder="Enter movie title">
+            </div>
+            <div class="form-group">
+                <label for="genre">Genre:</label>
+                <input type="text" id="genre" placeholder="Enter movie genre">
+            </div>
+            <div class="form-group">
+                <label for="rating">Rating:</label>
+                <input type="number" id="rating" step="0.1" min="0" max="10" placeholder="Enter movie rating">
+            </div>
+            <div class="form-group">
+                <label for="releaseYear">Release Year:</label>
+                <input type="number" id="releaseYear" min="1900" max="2024" placeholder="Enter release year">
+            </div>
+            <button id="addMovieBtn" class="btn-primary">Add Movie</button>
+        </div>
+
+        <div class="form-container">
+            <h2>Filter Movies</h2>
+            <div class="form-group">
+                <label for="genreFilter">Genre:</label>
+                <input type="text" id="genreFilter" placeholder="Enter genre to filter by">
+                <button id="listByGenreBtn" class="btn-secondary">List Movies</button>
+            </div>
+            <div class="form-group">
+                <label for="yearFilter">Year:</label>
+                <input type="number" id="yearFilter" min="1900" max="2024" placeholder="Enter year">
+                <button id="filterByYearBtn" class="btn-secondary">Filter Movies</button>
+            </div>
+        </div>
+
+        <section>
+            <h2>Movie Collection</h2>
+            <div id="movieCollection" class="movie-list"></div>
+        </section>
+
+        <section>
+            <h2>Highest Rated Movie</h2>
+            <div id="highestRatedMovie" class="highlight-box"></div>
+        </section>
+
+        <section>
+            <h2>Movie Titles</h2>
+            <div id="movieTitles" class="highlight-box"></div>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 23IT047</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
